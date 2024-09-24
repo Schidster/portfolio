@@ -29,7 +29,7 @@
 	🤖 <span class="underline underline-dotted underline-3 underline-offset-4" style="text-decoration-color: {$accentColor};">HomeSpan</span>
 </h2>
 <p class="font-sans px-6 text-neutral-400 tracking-wider line-height-relaxed">
-	Home Automation using <a href="https://github.com/HomeSpan/HomeSpan" style="color: {$accentColor};">Homespan</a>, Apple HomeKit and an
+	Home Automation using <a href="https://github.com/HomeSpan/HomeSpan" style="color: {$accentColor};">HomeSpan</a>, Apple HomeKit and an
 	<b>esp-32</b>
 	board. Can extend to multiple fans, lights and any other device using drivers.<br />
 	<span class="text-xs line-height-snug"> I was motivated by my laziness to switch off the fan while in bed :) </span>
@@ -64,5 +64,5 @@
 	class="font-mono font-bold ml-6 px-2 py-1 mb-4 b-3 text-neutral-2 rounded-md bg-dark-5"
 	style="border-color: {$accentColor}">VIEW PROJECT</button
 >
-<embed src="https://suchi-colors.netlify.app" class="w-full overflow-x-clip" />
+<embed src="https://suchi-colors.netlify.app" class="w-full overflow-x-clip h-60" />
 <div class="h-6"></div>
