@@ -1,25 +1,8 @@
 <script>
 	import 'virtual:uno.css';
-	import { interpolateLab } from 'd3-interpolate';
-	import { tweened } from 'svelte/motion';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-
-	const dotColors = [
-		'rgb(230, 175, 46)',
-		'rgb(150, 29, 78)',
-		'rgb(68, 255, 209)',
-		'rgb(228, 87, 46)',
-		'rgb(14, 173, 105)',
-		'rgb(255, 181, 194)',
-		'rgb(25, 100, 126)'
-	];
-	const randColor = () => dotColors[Math.round(Math.random() * dotColors.length)];
-	const dotColor = tweened(randColor(), {
-		duration: 1000,
-		interpolate: interpolateLab
-	});
-	setInterval(() => ($dotColor = randColor()), 2000);
+	import { accentColor } from '$lib';
 
 	const { children } = $props();
 </script>
@@ -31,7 +14,7 @@
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="font-serif text-5xl text-neutral-400" class:text-white={$page.url.pathname === '/'} onclick={() => goto('/')}>
-					S<span class="text-6xl line-height-2.5rem" style="color: {$dotColor};">.</span>
+					S<span class="text-6xl line-height-2.5rem" style="color: {$accentColor};">.</span>
 				</div>
 				<section class="ml-auto font-sans text-neutral-400 text-base">
 					<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -48,7 +31,7 @@
 		<section>
 			{@render children()}
 		</section>
-		<footer class="flex justify-between items-center mt-auto mb-6 px-6">
+		<footer class="flex justify-between items-center mt-auto pb-6 px-6">
 			<div class="text-neutral-400 font-display text-xl translate-y-1">© Schidster</div>
 			<button class="bg-dark-900 b-0" onclick={() => (window.location.href = 'https://github.com/schidster')}
 				><svg stroke-width="0" viewBox="0 0 496 512" class="size-8 fill-neutral-400 stroke-dark-900" xmlns="http://www.w3.org/2000/svg"
