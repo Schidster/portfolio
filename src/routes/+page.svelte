@@ -4,7 +4,7 @@
 	import { get } from 'svelte/store';
 	import { onMount } from 'svelte';
 
-	const names = ['Siddarth.', 'Sidhu.', 'Schidster.', 'Programmer.', 'Musician.'];
+	const names = ['Siddarth.', 'Schidster.', 'a Programmer.', 'a Developer.'];
 	const timePerLetter = 100;
 	const name = getTypewriter('Siddarth.', timePerLetter);
 
@@ -20,12 +20,20 @@
 	onMount(() => startTyping());
 </script>
 
-<section class="font-mono text-lg pl-12 text-neutral-200 w-full shadow-white">
-	<p>I am {$name}<span class="text-3xl input-cursor" style="color: {$accentColor};">▮</span></p>
-	<p>I code.</p>
+<section class="font-mono text-lg pl-8 text-neutral-200 w-full bg-dark-7 py-4">
+	<p>
+		<span class="opacity-30 text-sm">1 &nbsp</span>I am <span class="font-bold text-xl">{$name}</span><span
+			class="text-3xl input-cursor"
+			style="color: {$accentColor};">▮</span
+		>
+	</p>
+	<p><span class="opacity-30 text-sm">2 &nbsp;</span>I code.</p>
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<p>For myself and <span style="color: {$accentColor}" onclick={() => goto('/projects')}>others</span>.</p>
+	<p>
+		<span class="opacity-30 text-sm">3 &nbsp;</span>For myself and
+		<span style="color: {$accentColor}" onclick={() => goto('/projects')}>others</span>.
+	</p>
 </section>
 
 <style>
