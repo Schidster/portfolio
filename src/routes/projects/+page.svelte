@@ -14,7 +14,7 @@
 {#snippet title(text: string, emoji: string, url: string)}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-	<h2 onclick={() => (window.location.href = url)} class="font-sans text-2xl px-6 mb-4 text-neutral-200 w-fit">
+	<h2 onclick={() => (window.location.href = url)} class="font-sans text-4xl px-6 mb-4 text-neutral-200 w-fit">
 		{emoji}
 		<span class="underline underline-dotted underline-3 underline-offset-4" style="text-decoration-color: {$accentColor};">{text}</span>
 	</h2>
