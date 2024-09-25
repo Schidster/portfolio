@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { accentColor } from '$lib';
 </script>
 
@@ -7,56 +7,50 @@
 	<script
 		src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FSchidster%2Fhomespan%2Fblob%2Fmain%2Fhomespan.ino%23L6-L18&style=mono-blue&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on"
 	></script>
+	<title>S ✺ Projects</title>
 </svelte:head>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<h2 onclick={() => (window.location.href = 'https://complaints.vercel.app/feed/all')} class="font-sans px-6 text-neutral-200 w-fit">
-	💥 <span class="underline underline-dotted underline-3 underline-offset-4" style="text-decoration-color: {$accentColor};">Complaints</span
+{#snippet title(text: string, emoji: string, url: string)}
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+	<h2 onclick={() => (window.location.href = url)} class="font-sans px-6 text-neutral-200 w-fit">
+		{emoji}
+		<span class="underline underline-dotted underline-3 underline-offset-4" style="text-decoration-color: {$accentColor};">{text}</span>
+	</h2>
+{/snippet}
+{#snippet description(text: string)}
+	<p class="font-sans px-6 text-neutral-400 tracking-wider line-height-relaxed">
+		{@html text}
+	</p>
+{/snippet}
+{#snippet viewButton(url: string)}
+	<button
+		onclick={() => (window.location.href = url)}
+		class="font-mono font-bold ml-6 px-2 py-1 mb-4 b-4 text-neutral-2 rounded-md bg-dark-5"
+		style="border-color: {$accentColor}">VIEW PROJECT</button
 	>
-</h2>
-<p class="font-sans px-6 text-neutral-400 tracking-wider line-height-relaxed">
-	An anonymous platform where people can complain about what they don't like and others can rant about it!
-</p>
-<button
-	onclick={() => (window.location.href = 'https://complaints.vercel.app')}
-	class="font-mono font-bold ml-6 px-2 py-1 mb-4 b-4 text-neutral-2 rounded-md bg-dark-5"
-	style="border-color: {$accentColor}">VIEW PROJECT</button
->
-<embed src="https://complaints.vercel.app/feed/all" class="w-full overflow-x-clip h-110" />
+{/snippet}
+
+{@render title('Complaints', '💥', 'https://complaints.vercel.app/')}
+{@render description("An anonymous platform where people can complain about what they don't like and others can rant about it!")}
+{@render viewButton('https://complaints.vercel.app')}
+<embed src="https://complaints.vercel.app/feed/all" class="w-full overflow-x-clip h-100" />
 <div class="h-6"></div>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<h2 onclick={() => (window.location.href = 'https://decalculae.vercel.app')} class="font-sans px-6 text-neutral-200 w-fit">
-	🧮 <span class="underline underline-dotted underline-3 underline-offset-4" style="text-decoration-color: {$accentColor};">DeCalculaè</span
-	>
-</h2>
-<p class="font-sans px-6 text-neutral-400 tracking-wider line-height-relaxed">A really good looking calculator.</p>
-<button
-	onclick={() => (window.location.href = 'https://decalculae.vercel.app')}
-	class="font-mono font-bold ml-6 px-2 py-1 mb-4 b-4 text-neutral-2 rounded-md bg-dark-5"
-	style="border-color: {$accentColor}">VIEW PROJECT</button
->
+{@render title('DeCalculaè', '🧮', 'https://decalculae.vercel.app/')}
+{@render description('A really good looking calculator.')}
+{@render viewButton('https://decalculae.vercel.app')}
 <embed src="https://decalculae.vercel.app" class="w-full overflow-x-clip h-110" />
 <div class="h-6"></div>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<h2 onclick={() => (window.location.href = 'https://github.com/Schidster/homespan')} class="font-sans px-6 text-neutral-200 w-fit">
-	🤖 <span class="underline underline-dotted underline-3 underline-offset-4" style="text-decoration-color: {$accentColor};">HomeSpan</span>
-</h2>
+{@render title('HomeSpan', '🤖', 'https://github.com/Schidster/homespan')}
 <p class="font-sans px-6 text-neutral-400 tracking-wider line-height-relaxed">
 	Home Automation using <a href="https://github.com/HomeSpan/HomeSpan" style="color: {$accentColor};">HomeSpan</a>, Apple HomeKit and an
 	<b>esp-32</b>
 	board. Can extend to multiple fans, lights and any other device using drivers.<br />
 	<span class="text-xs line-height-snug"> I was motivated by my laziness to switch off the fan while in bed :) </span>
 </p>
-<button
-	onclick={() => (window.location.href = 'https://github.com/Schidster/homespan')}
-	class="font-mono font-bold ml-6 px-2 py-1 mb-4 b-3 text-neutral-2 rounded-md bg-dark-5"
-	style="border-color: {$accentColor}">VIEW PROJECT</button
->
+{@render viewButton('https://github.com/Schidster/homespan')}
 <iframe
 	title="homespan.ino"
 	frameborder="0"
@@ -67,20 +61,10 @@
 ></iframe>
 <div class="h-6"></div>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<h2 onclick={() => (window.location.href = 'https://suchi-colors.netlify.app')} class="font-sans px-6 text-neutral-200 w-fit">
-	🎨 <span class="underline underline-dotted underline-3 underline-offset-4" style="text-decoration-color: {$accentColor};"
-		>Color Scroll</span
-	>
-</h2>
-<p class="font-sans px-6 text-neutral-400 tracking-wider line-height-relaxed">
-	Tired of scrolling videos all day? Get more tired by scrolling infinite colors! <b>Try scolling and tapping below...</b>
-</p>
-<button
-	onclick={() => (window.location.href = 'https://suchi-colors.netlify.app')}
-	class="font-mono font-bold ml-6 px-2 py-1 mb-4 b-3 text-neutral-2 rounded-md bg-dark-5"
-	style="border-color: {$accentColor}">VIEW PROJECT</button
->
+{@render title('Colors', '🎨', 'https://suchi-colors.netlify.ap')}
+{@render description(
+	'Tired of scrolling videos all day? Get more tired by scrolling infinite colors! <b>Try scolling and tapping below...</b>'
+)}
+{@render viewButton('https://suchi-colors.netlify.ap')}
 <embed src="https://suchi-colors.netlify.app" class="w-full overflow-x-clip h-60" />
 <div class="h-6"></div>

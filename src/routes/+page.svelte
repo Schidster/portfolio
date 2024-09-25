@@ -20,18 +20,22 @@
 	onMount(() => startTyping());
 </script>
 
+<svelte:head>
+	<title>S ✺ Portfolio</title>
+</svelte:head>
+
 <section class="font-mono text-lg pl-8 text-neutral-200 w-full bg-dark-7 py-4">
 	<p>
-		<span class="opacity-30 text-sm">1 &nbsp</span>I am <span class="font-bold text-xl">{$name}</span><span
+		<span class="opacity-30 text-sm">1 &nbsp</span>i am <span class="font-bold text-xl">{$name}</span><span
 			class="text-3xl input-cursor"
 			style="color: {$accentColor};">▮</span
 		>
 	</p>
-	<p><span class="opacity-30 text-sm">2 &nbsp;</span>I code.</p>
+	<p><span class="opacity-30 text-sm">2 &nbsp;</span>i code sometimes.</p>
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<p>
-		<span class="opacity-30 text-sm">3 &nbsp;</span>For myself and
+		<span class="opacity-30 text-sm">3 &nbsp;</span>for myself and
 		<span style="color: {$accentColor}" onclick={() => goto('/projects')}>others</span>.
 	</p>
 </section>
