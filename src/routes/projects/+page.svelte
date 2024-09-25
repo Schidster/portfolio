@@ -80,11 +80,11 @@
 ></iframe>
 <div class="h-12"></div>
 
-{@render title('Colors', '🎨', 'https://suchi-colors.netlify.ap')}
+{@render title('Colors', '🎨', 'https://suchi-colors.netlify.app')}
 {@render techUsed(['svelte', 'tailwind css', 'vercel'])}
 {@render description(
 	'Tired of scrolling videos all day? Get more tired by scrolling infinite colors! <b>Try scolling and tapping below...</b>'
 )}
-{@render viewButton('https://suchi-colors.netlify.ap')}
+{@render viewButton('https://suchi-colors.netlify.app')}
 <embed src="https://suchi-colors.netlify.app" class="w-full overflow-x-clip h-60" />
 <div class="h-6"></div>
