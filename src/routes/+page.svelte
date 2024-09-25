@@ -41,7 +41,7 @@
 	</p>
 </section>
 
-<section class="font-sans tracking-wider line-height-relaxed text-neutral-4 px-5 mt-8">
+<section class="font-sans tracking-wider line-height-relaxed text-neutral-4 px-5 my-8">
 	<p>I specialize in solutions for small and medium-sized startups. I can make</p>
 	<ul class="pl-6 py-2">
 		<li>• Websites</li>
@@ -52,7 +52,7 @@
 	</ul>
 	<h3 class="mt-4 mb-2 text-xl text-neutral-2">Technologies I Use</h3>
 	<div class="flex flex-wrap">
-		{#each ['javascript', 'svelte', 'firebase', 'docker', 'aws', 'typescript', 'nodejs', 'sql', 'postgres', 'python', 'cloudflare', 'supabase', 'tailwind css'] as tech (tech)}
+		{#each ['javascript', 'svelte', 'firebase', 'docker', 'aws', 'typescript', 'nodejs', 'sql', 'postgres', 'python', 'cloudflare', 'supabase', 'tailwind css', 'dns', 'terraform', 'sst', 'unocss', 'svelte-kit'] as tech (tech)}
 			<Tech {tech} />
 		{/each}
 	</div>
