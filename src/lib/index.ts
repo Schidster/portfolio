@@ -17,6 +17,7 @@ export const accentColor = tweened(randColor(), {
 	duration: 1000,
 	interpolate: interpolateLab
 });
+
 export const getTypewriter = (initialValue: string = '', duration: number = 200) => {
 	return tweened(initialValue, {
 		interpolate(a, b) {
