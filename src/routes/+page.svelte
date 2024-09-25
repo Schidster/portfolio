@@ -11,7 +11,7 @@
 
 	async function startTyping() {
 		while (true) {
-			const nextName = names[Math.round(Math.random() * names.length)];
+			const nextName = names[Math.round(Math.random() * names.length - 1)];
 			const totalLength = get(name).length + nextName.length;
 			name.set(nextName);
 			await new Promise((r) => setTimeout(r, timePerLetter * totalLength + 1400));

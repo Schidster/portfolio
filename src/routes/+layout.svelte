@@ -4,6 +4,21 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { accentColor } from '$lib';
+	import { onNavigate } from '$app/navigation';
+	// import { onMount } from 'svelte';
+	// import { dev } from '$app/environment';
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
+
+	// onMount(() => navigator.serviceWorker.register("/service-worker.js", { type: dev ? "module" : "classic" }))
 
 	const { children } = $props();
 </script>
@@ -39,7 +54,7 @@
 				</section>
 			</section>
 		</nav>
-		<section>
+		<section class="children">
 			{@render children()}
 		</section>
 		<footer class="flex justify-between items-center mt-auto pb-6 px-6">
@@ -54,3 +69,41 @@
 		</footer>
 	</section>
 </section>
+
+<style>
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fade-out {
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes slide-from-right {
+		from {
+			transform: translateX(30px);
+		}
+	}
+
+	@keyframes slide-to-left {
+		to {
+			transform: translateX(-30px);
+		}
+	}
+
+	.children::view-transition-old(root) {
+		animation:
+			90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+			300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+	}
+
+	.children::view-transition-new(root) {
+		animation:
+			210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+			300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+	}
+</style>
