@@ -40,18 +40,18 @@
 	>
 {/snippet}
 
-{@render title('Cholai', '🥬', 'https://velli.pages.dev/919999999999/shop?n=stranger&s=MGPREAST&new')}
-{@render techUsed(['svelte-kit', 'supabase', 'postgres', 'nodejs', 'cloudflare', 'unocss'])}
-{@render description('A vegetable ordering platform, accessed primarily through WhatsApp chatbot.')}
-{@render viewButton('https://velli.pages.dev/919999999999/shop?n=stranger&s=MGPREAST&new')}
-<embed src="https://velli.pages.dev/919999999999/shop?n=stranger&s=MGPREAST&new" class="w-full overflow-x-clip h-100" />
-<div class="h-12"></div>
-
 {@render title('Complaints', '💥', 'https://complaints.vercel.app/')}
 {@render techUsed(['svelte-kit', 'supabase', 'vercel', 'sql'])}
 {@render description("An anonymous platform where people can complain about what they don't like and others can rant about it!")}
 {@render viewButton('https://complaints.vercel.app')}
 <embed src="https://complaints.vercel.app/feed/all" class="w-full overflow-x-clip h-100" />
+<div class="h-12"></div>
+
+{@render title('Cholai', '🥬', 'https://velli.pages.dev/919999999999/shop?n=stranger&s=MGPREAST&new')}
+{@render techUsed(['svelte-kit', 'supabase', 'postgres', 'nodejs', 'cloudflare', 'unocss'])}
+{@render description('A vegetable ordering platform, accessed primarily through WhatsApp chatbot.')}
+{@render viewButton('https://velli.pages.dev/919999999999/shop?n=stranger&s=MGPREAST&new')}
+<embed src="https://velli.pages.dev/919999999999/shop?n=stranger&s=MGPREAST&new" class="w-full overflow-x-clip h-100" />
 <div class="h-12"></div>
 
 {@render title('DeCalculaè', '🧮', 'https://decalculae.vercel.app/')}
