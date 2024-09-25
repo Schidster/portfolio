@@ -25,5 +25,5 @@
 	<p class="">call, message or whatsapp</p>
 	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="my-4 text-4xl cursor-pointer">☎️</button>
 	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="font-display text-4xl cursor-pointer">9500088697</button>
-	<p class="tracking-tight text-2xl py-4">( ͡❛ ͜ʖ ͡❛)</p>
+	<!-- <span class="text-2xl py-4 w-fit">( &#x361;&#x275B;&#x202F;&#x35C;&#x296; &#x361;&#x275B;)</span> -->
 </div>
