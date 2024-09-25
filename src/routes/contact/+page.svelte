@@ -22,11 +22,11 @@
 </p>
 
 <div class="font-display text-neutral-2 text-3xl line-height-loose w-full text-center mt-20">
-	call, message or whatsapp <br />
+	<p>call, message or whatsapp</p>
 	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="bg-transparent border-0 text-4xl cursor-pointer">☎️</button>
-	<br />
 	<button
 		onclick={() => (window.location.href = 'tel:+919500088697')}
 		class="bg-transparent font-display text-4xl text-white b-0 cursor-pointer">9500088697</button
-	><br /> <span class="tracking-tight text-2xl">( ͡❛ ͜ʖ ͡❛)</span>
+	>
+	<p class="tracking-tight text-2xl">( ͡❛ ͜ʖ ͡❛)</p>
 </div>
