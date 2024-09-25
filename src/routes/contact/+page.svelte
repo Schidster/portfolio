@@ -15,15 +15,19 @@
 	{/if}
 {/snippet}
 
-<p class="font-sans text-neutral-4 text-lg tracking-wider w-full text-center">
+<p class="font-sans text-neutral-4 text-lg tracking-wider w-full my-12 text-center">
 	whatever it is, <br /> for your {@render link('projects', '/projects')}, for {@render link('collaboration')}, <br /> for even for {@render link(
 		'tech over tea'
 	)}, <br /> feel free to reach out to me!
 </p>
 
-<div class="font-display text-neutral-2 text-3xl line-height-loose w-full text-center mt-20 flex flex-col items-center">
+<div class="font-display text-neutral-2 text-3xl line-height-loose w-full text-center flex flex-col items-center">
 	<p class="">call, message or whatsapp</p>
 	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="my-4 text-4xl cursor-pointer">☎️</button>
-	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="font-display text-4xl cursor-pointer">9500088697</button>
+	<button
+		onclick={() => (window.location.href = 'tel:+919500088697')}
+		style="text-decoration-color: {$accentColor};"
+		class="font-display text-4xl cursor-pointer underline underline-dotted underline-offset-4">9500088697</button
+	>
 	<!-- <span class="text-2xl py-4 w-fit">( &#x361;&#x275B;&#x202F;&#x35C;&#x296; &#x361;&#x275B;)</span> -->
 </div>

@@ -3,6 +3,7 @@
 	import { accentColor, getTypewriter } from '$lib';
 	import { get } from 'svelte/store';
 	import { onMount } from 'svelte';
+	import Tech from './tech.svelte';
 
 	const names = ['Siddarth.', 'Schidster.', 'a Programmer.', 'a Developer.'];
 	const timePerLetter = 100;
@@ -24,7 +25,7 @@
 	<title>S ✺ Portfolio</title>
 </svelte:head>
 
-<section class="font-mono text-lg pl-8 text-neutral-200 w-full bg-dark-7 py-4">
+<section class="font-mono text-lg pl-8 text-neutral-2 w-full bg-dark-7 py-4">
 	<p>
 		<span class="opacity-30 text-sm">1 &nbsp</span>i am <span class="font-bold text-xl">{$name}</span><span
 			class="text-3xl input-cursor"
@@ -38,6 +39,25 @@
 		<span class="opacity-30 text-sm">3 &nbsp;</span>for myself and
 		<span style="color: {$accentColor}" onclick={() => goto('/projects')}>others</span>.
 	</p>
+</section>
+
+<section class="font-sans tracking-wider line-height-relaxed text-neutral-4 px-5 mt-8">
+	<p>I specialize in solutions for small and medium-sized startups. I can make</p>
+	<ul class="pl-6 py-2">
+		<li>• Websites</li>
+		<li>• AI Integration</li>
+		<li>• Mobile apps</li>
+		<li>• Admin apps</li>
+		<li>• Database Management</li>
+	</ul>
+	<h3 class="mt-4 mb-2 text-xl text-neutral-2">Technologies I Use</h3>
+	<div class="flex flex-wrap">
+		{#each ['javascript', 'svelte', 'firebase', 'docker', 'aws', 'typescript', 'nodejs', 'sql', 'postgres', 'python', 'cloudflare', 'supabase', 'tailwind css'] as tech (tech)}
+			<Tech {tech} />
+		{/each}
+	</div>
+	<br />
+	<p>I prioritize using latest frameworks and technologies, to ensure speed and reliability.</p>
 </section>
 
 <style>

@@ -14,18 +14,28 @@
 			<section class="flex px-6 items-center">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div class="font-serif text-5xl text-neutral-400" class:text-white={$page.url.pathname === '/'} onclick={() => goto('/')}>
+				<div
+					class="font-serif text-5xl text-neutral-400 cursor-pointer"
+					class:text-white={$page.url.pathname === '/'}
+					onclick={() => goto('/')}
+				>
 					S<span class="text-6xl line-height-2.5rem" style="color: {$accentColor};">.</span>
 				</div>
 				<section class="ml-auto font-sans text-neutral-400 text-base">
 					<!-- svelte-ignore a11y_click_events_have_key_events -->
 					<!-- svelte-ignore a11y_no_static_element_interactions -->
-					<div onclick={() => goto('/projects')} class:text-white={$page.url.pathname === '/projects'} class="inline-block pr-2">
+					<div
+						onclick={() => goto('/projects')}
+						class:text-white={$page.url.pathname === '/projects'}
+						class="inline-block pr-2 cursor-pointer"
+					>
 						projects
 					</div>
 					<!-- svelte-ignore a11y_click_events_have_key_events -->
 					<!-- svelte-ignore a11y_no_static_element_interactions -->
-					<div onclick={() => goto('/contact')} class:text-white={$page.url.pathname === '/contact'} class="inline-block">contact</div>
+					<div onclick={() => goto('/contact')} class:text-white={$page.url.pathname === '/contact'} class="inline-block cursor-pointer">
+						contact
+					</div>
 				</section>
 			</section>
 		</nav>
