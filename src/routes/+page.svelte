@@ -23,6 +23,8 @@
 
 <svelte:head>
 	<title>S ✺ Portfolio</title>
+	<link rel="prefetch" href="/projects" />
+	<link rel="prefetch" href="/contact" />
 </svelte:head>
 
 <section class="font-mono text-lg pl-8 text-neutral-2 w-full bg-dark-7 py-4">
