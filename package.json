@@ -20,6 +20,7 @@
 		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
 		"@types/d3-interpolate": "^3.0.4",
 		"@unocss/extractor-svelte": "^0.62.4",
+		"@unocss/reset": "^0.62.4",
 		"d3-interpolate": "^3.0.1",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",

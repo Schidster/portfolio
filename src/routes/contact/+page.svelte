@@ -22,13 +22,8 @@
 </p>
 
 <div class="font-display text-neutral-2 text-3xl line-height-loose w-full text-center mt-20 flex flex-col items-center">
-	<p class="my-0">call, message or whatsapp</p>
-	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="bg-transparent my-4 border-0 text-4xl cursor-pointer"
-		>☎️</button
-	>
-	<button
-		onclick={() => (window.location.href = 'tel:+919500088697')}
-		class="bg-transparent font-display text-4xl decoration-none text-white b-0 cursor-pointer">9500088697</button
-	>
-	<p class="tracking-tight text-2xl">( ͡❛ ͜ʖ ͡❛)</p>
+	<p class="">call, message or whatsapp</p>
+	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="my-4 text-4xl cursor-pointer">☎️</button>
+	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="font-display text-4xl cursor-pointer">9500088697</button>
+	<p class="tracking-tight text-2xl py-4">( ͡❛ ͜ʖ ͡❛)</p>
 </div>
