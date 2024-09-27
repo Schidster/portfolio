@@ -21,12 +21,24 @@
 </p>
 
 <div class="font-display text-neutral-2 text-3xl line-height-loose w-full text-center flex flex-col items-center">
-	<p class="">call, message or whatsapp</p>
+	<p class="">contact me at</p>
 	<button onclick={() => (window.location.href = 'tel:+919500088697')} class="my-4 text-4xl cursor-pointer">☎️</button>
 	<button
 		onclick={() => (window.location.href = 'tel:+919500088697')}
 		style="text-decoration-color: {$accentColor};"
-		class="font-display text-4xl cursor-pointer underline underline-wavy underline-offset-4">9500088697</button
+		class="font-display text-4xl cursor-pointer underline underline-2 underline-wavy underline-offset-4">9500088697</button
+	>
+	<!-- <span class="text-2xl py-4 w-fit">( &#x361;&#x275B;&#x202F;&#x35C;&#x296; &#x361;&#x275B;)</span> -->
+
+	<button
+		onclick={() => (window.location.href = 'mailto:freelance.schidster@gmail.com?subject="I really need to talk about something."')}
+		class="mb-2 mt-4 text-4xl cursor-pointer">📧</button
+	>
+	<button
+		onclick={() => (window.location.href = 'mailto:freelance.schidster@gmail.com?subject="I really need to talk about something"')}
+		style="text-decoration-color: {$accentColor};"
+		class="font-display text-3xl cursor-pointer underline underline-2 underline-wavy underline-offset-4"
+		>freelance.schidster@gmail.com</button
 	>
 	<!-- <span class="text-2xl py-4 w-fit">( &#x361;&#x275B;&#x202F;&#x35C;&#x296; &#x361;&#x275B;)</span> -->
 </div>
