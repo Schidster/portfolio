@@ -23,9 +23,9 @@
 
 <svelte:head>
 	<title>S ✺ Portfolio</title>
+	<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 	<link rel="prefetch" href="/projects" />
 	<link rel="prefetch" href="/contact" />
-	<link rel="preconnect" href="https://velli.pages.dev" />
 </svelte:head>
 
 <section class="font-mono text-lg pl-8 text-neutral-2 w-full bg-dark-7 py-4">
@@ -61,6 +61,20 @@
 	</div>
 	<br />
 	<p>I prioritize using latest frameworks and technologies, to ensure speed and reliability.</p>
+</section>
+
+<section class="px-5 pb-6">
+	<div
+		class="badge-base LI-profile-badge"
+		data-locale="en_US"
+		data-size="medium"
+		data-theme="dark"
+		data-type="VERTICAL"
+		data-vanity="siddarth-s-59a21231b"
+		data-version="v1"
+	>
+		<a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/siddarth-s-59a21231b?trk=profile-badge"></a>
+	</div>
 </section>
 
 <style>
