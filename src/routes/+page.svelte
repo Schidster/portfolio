@@ -77,6 +77,15 @@
 	</div>
 </section>
 
+<section class="pl-5 pb-6">
+	<a href="https://roadmap.sh"
+		><img
+			src="https://roadmap.sh/card/wide/66fd15cc366148ee28e8e5ee?variant=dark&roadmaps=fullstack%2Cpostgresql-dba"
+			alt="roadmap.sh"
+		/></a
+	>
+</section>
+
 <style>
 	@keyframes blink {
 		0% {
